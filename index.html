@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <style>
+      #wrong-email,
+      #right-email,
+      #wrong-pass,
+      #right-pass {
+        display: none;
+      }
+
+      #characters8,
+      #letter1,
+      #digit1,
+      #specialChr {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-secondary">
+    <section class="container">
+      <div class="w-50 mx-auto border my-5 bg-light p-4 rounded">
+        <h1
+          class="
+            text-danger text-center text-decoration-underline
+            mb-4
+            text-uppercase
+          "
+        >
+          Sign up
+        </h1>
+        <div>
+          <!-- email field -->
+          <label class="w-75 mb-3">
+            <input
+              class="form-control py-3"
+              type="email"
+              name="email"
+              placeholder="Enter your email.."
+              id="input-email"
+            />
+            <small class="ps-2 text-left text-success fw-bold" id="right-email"
+              >Your email is valid</small
+            >
+            <small class="ps-2 text-left text-danger fw-bold" id="wrong-email"
+              >Your email isn't valid</small
+            >
+          </label>
+          <!-- password field -->
+          <label class="w-75">
+            <input
+              class="form-control py-3"
+              type="password"
+              name="password"
+              placeholder="Enter password.."
+              id="input-pass"
+            />
+            <!-- validation matching -->
+            <small
+              class="ps-2 text-left text-secondary fw-bold"
+              id="characters8"
+              >password must be at least 8 characters</small
+            >
+            <small class="ps-2 text-left text-secondary fw-bold" id="letter1"
+              >password must contain at least one letter</small
+            >
+            <small class="ps-2 text-left text-secondary fw-bold" id="digit1"
+              >password must contain at least one digit</small
+            >
+            <small class="ps-2 text-left text-secondary fw-bold" id="specialChr"
+              >password must contain a special characters</small
+            >
+            <!-- for valid & invalid pass-->
+            <small class="ps-2 text-left text-success fw-bold" id="right-pass"
+              >Your password is valid</small
+            >
+            <small class="ps-2 text-left text-danger fw-bold" id="wrong-pass"
+              >Your password isn't valid</small
+            >
+          </label>
+          <button
+            type="submit"
+            class="btn btn-danger mt-4 text-uppercase d-block"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- custom js -->
+    <script src="./script.js"></script>
+  </body>
+</html>
