@@ -1,3 +1,13 @@
+let isPassValid = false;
+let isEmailValid = false;
+
+const clickSubmit = () => {
+  if (isEmailValid && isPassValid) {
+    alert("Hurraayy, you are on our team!");
+    location.reload();
+  }
+};
+
 // emailValidationMessage: to show email validation message-
 const emailValidationMessage = (value, wrong, right) => {
   const regEmail =
@@ -6,6 +16,7 @@ const emailValidationMessage = (value, wrong, right) => {
   if (regEmail.test(value) === true) {
     wrong.style.display = "none";
     right.style.display = "block";
+    isEmailValid = true;
   } else {
     right.style.display = "none";
     wrong.style.display = "block";
@@ -42,6 +53,7 @@ const passValidationMessage = (value, wrong, right) => {
   if (regPass.test(value) === true) {
     wrong.style.display = "none";
     right.style.display = "block";
+    isPassValid = true;
   } else {
     right.style.display = "none";
     wrong.style.display = "block";

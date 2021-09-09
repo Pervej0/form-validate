@@ -48,6 +48,7 @@
               name="email"
               placeholder="Enter your email.."
               id="input-email"
+              required
             />
             <small class="ps-2 text-left text-success fw-bold" id="right-email"
               >Your email is valid</small
@@ -64,6 +65,7 @@
               name="password"
               placeholder="Enter password.."
               id="input-pass"
+              required
             />
             <!-- validation matching -->
             <small
@@ -89,7 +91,8 @@
             >
           </label>
           <button
-            type="submit"
+            onclick="clickSubmit()"
+            type="button"
             class="btn btn-danger mt-4 text-uppercase d-block"
           >
             Sign up
